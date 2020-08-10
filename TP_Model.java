@@ -79,7 +79,7 @@ public class TP_Model {
             for (int i = 0; i < m; i++) {
                 expr_3.addTerm(x[i][j], 1);
             }
-            model.addGe(expr_3, demands[j]);
+            model.addEq(expr_3, demands[j]);
         }
     }
     //The following code creates the objective function for the problem.
