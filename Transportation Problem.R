@@ -50,9 +50,6 @@ Model <- MIPModel() %>%
   add_constraint(sum_expr(x[i, j], i = 1:m) == d[j] , j = 1:n) %>%
   solve_model(with_ROI(solver = "symphony", verbosity = 1))
 
-
-} else {print(paste("Feasibility condition does not hold"))}
-
 #Model summary
 
 ##Status
@@ -74,5 +71,5 @@ for (r in 1:m) {
     }
   }
 }
-
+} else {print(paste("Feasibility condition does not hold"))}
 
