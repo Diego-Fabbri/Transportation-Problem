@@ -1,0 +1,58 @@
+Supplier: 1 makes 150.0 units of product
+Supplier: 2 makes 20.0 units of product
+Supplier: 3 makes 130.0 units of product
+Demand Center: 1 requires 135.0 units of product
+Demand Center: 2 requires 75.0 units of product
+Demand Center: 3 requires 45.0 units of product
+Demand Center: 4 requires 45.0 units of product
+Found incumbent of value 2270.000000 after 0.03 sec. (0.00 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 7 rows, 12 columns, and 24 nonzeros.
+Reduced MIP has 0 binaries, 12 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.09 sec. (0.01 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 7 rows, 12 columns, and 24 nonzeros.
+Reduced MIP has 0 binaries, 12 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.01 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 4 threads.
+Root relaxation solution time = 0.03 sec. (0.01 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                         2270.0000        0.0000        6  100.00%
+*     0     0      integral     0     1285.0000     1285.0000        6    0.00%
+Elapsed time = 0.31 sec. (0.05 ticks, tree = 0.00 MB, solutions = 2)
+
+Root node processing (before b&c):
+  Real time             =    0.33 sec. (0.05 ticks)
+Parallel b&c, 4 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.33 sec. (0.05 ticks)
+Feasibility condition is satisfied
+Total demand is equal to total supply
+Total demand is: 300.0
+Total supply is: 300.0
+Solution status = Optimal
+
+
+
+Total Cost = 1285.0
+
+From Supply Center 1
+---->to demand center 1 flows 50.0 and related cost is = 250.0
+---->to demand center 2 flows 55.0 and related cost is = 110.0
+---->to demand center 3 flows 45.0 and related cost is = 135.0
+
+From Supply Center 2
+---->to demand center 2 flows 20.0 and related cost is = 20.0
+
+From Supply Center 3
+---->to demand center 1 flows 85.0 and related cost is = 680.0
+---->to demand center 4 flows 45.0 and related cost is = 90.0
+

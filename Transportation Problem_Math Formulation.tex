@@ -1,0 +1,87 @@
+\documentclass[a4paper,12pt,titlepage]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage{tikz,pgf}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+\usepackage[english]{babel}
+%Url e Bookmarks of output PDF 
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+%	pdftitle={Document title},
+	bookmarks=true,
+	%pdfpagemode=FullScreen,
+}
+\usepackage{rotating}
+\usepackage{tabularx}
+\usepackage{multirow} 
+\usepackage{lscape}
+\usepackage{tikz}
+%to insert PDF files
+\usepackage[final]{pdfpages}
+%--Packages--
+\usepackage{eurosym}
+\usepackage{graphicx} \usepackage{verbatim}
+\usepackage{graphics}
+\usepackage{tikz,pgf}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsmath,amssymb,amsthm,textcomp}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{amsmath,amssymb,mathrsfs}
+\usepackage{xcolor}
+\usepackage{graphicx,color,listings}
+\frenchspacing 
+\usepackage{geometry}
+\usepackage{rotating}
+\usepackage{caption}
+\usepackage{xcolor}
+\usepackage{listings}
+%Cool maths printing
+\usepackage{amsmath}
+%PseudoCode
+\usepackage{algorithm2e}
+
+
+\begin{document}
+\section*{Transportation Problem}
+Goods are produced at $m$ different supply centers $i=1,2,...,m$.\\
+The supply produced at supply center $i$ is $S_i$, $i=1,2,...,m$.\\
+The demand for the good comes from $n$ different demand centers, $d_j$ $j=1,2,...,n$.\\
+Cost of shipping one unit from supply center $i$ to demand center $j$ is $c_{ij}$.\\
+Variables $x_{ij}$ define the number of units shipped from supply center $i$ to demand center $j$.
+\subsection*{Feasibility condition}
+\begin{equation*}
+\sum_{j=1}^{n} d_j \leq \sum_{i=1}^{m} S_i
+\end{equation*}
+\subsection*{Math Formulation}
+\begin{equation}
+\sum_{i=1}^{m}\sum_{j=1}^{n} c_{ij} \cdot x_{ij}
+\tag{1}
+\end{equation}
+\begin{equation}
+\sum_{j=1}^{n} x_{ij} \leq S_i \qquad i=1,2,...,m
+\tag{2}
+\end{equation}
+\begin{equation}
+\sum_{i=1}^{m}x_{ij} = d_j \qquad j=1,2,...,n
+\tag{3}
+\end{equation}
+\begin{equation}
+x_{ij} \geq 0 \qquad i=1,2,...,m,\,\, j=1,2,...,n
+\tag{4}
+\end{equation}
+In this problem you can also assume that variables $x_{ij}$ take on integer
+values (and non-negative ones), it depends on the good you are dealing with.
+\end{document}
